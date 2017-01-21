@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 tmux new-session -d -s "pgimport"
 tmux split-window -h
