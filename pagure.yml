@@ -7,7 +7,7 @@ root: ~/pagure/
 pre: sudo systemctl start postgresql
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: workon pagure
+pre_window: workon pagure && clear
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
