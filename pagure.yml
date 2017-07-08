@@ -40,5 +40,6 @@ windows:
       panes:
           - export PAGURE_CONFIG=/home/vivek/pagure/clones/config.py && python runserver.py
           - psql -U postgres
+          - export PAGURE_CONFIG=/home/vivek/pagure/clones/config.py && python runworker.py --debug
   - plain:
       layout: main-vertical
