@@ -39,7 +39,7 @@ windows:
   - server:
       layout: main-vertical
       panes:
-          - export DJANGO_SETTINGS_MODULE=/home/vivek/ethcld/settings_dev.py && python manage.py runserver
+          - export DJANGO_SETTINGS_MODULE=settings_dev && python manage.py runserver
           - psql -U postgres
             #- export DJANGO_SETTINGS_MODULE=/home/vivek/ethcld/settings_dev.py && python runworker.py --debug
           - cd ethereal_push && python server.py
