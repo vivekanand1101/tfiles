@@ -4,8 +4,7 @@ name: ethcld
 root: ~/ethcld/
 
 # Runs before everything. Use it to start daemons etc.
-pre: sudo systemctl start postgresql
-pre: sudo systemctl start rabbitmq-server
+pre: sudo systemctl start postgresql && sudo systemctl start rabbitmq-server
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window: workon rmq && clear
@@ -41,7 +40,7 @@ windows:
       panes:
           - export DJANGO_SETTINGS_MODULE=settings_dev && python manage.py runserver
           - psql -U postgres
-            #- export DJANGO_SETTINGS_MODULE=/home/vivek/ethcld/settings_dev.py && python runworker.py --debug
-          - cd ethereal_push && python server.py
+          - python runworker.py --debug
+          - cd ether_push && python tserver.py
   - plain:
       layout: main-vertical
