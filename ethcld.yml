@@ -40,7 +40,7 @@ windows:
       panes:
           - export DJANGO_SETTINGS_MODULE=settings_dev && python manage.py runserver
           - psql -U postgres
-          - python runworker.py --debug
+          - export DJANGO_SETTINGS_MODULE=settings_dev && python runworker.py --debug
           - cd ether_push && python tserver.py
   - plain:
       layout: main-vertical
